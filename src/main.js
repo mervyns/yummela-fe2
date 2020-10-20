@@ -2,7 +2,7 @@ import Vue from 'vue'
 import router from '@router'
 import store from '@state/store'
 import App from './app.vue'
-
+import './assets/styles/index.css'
 // Globally register all `_base`-prefixed components
 import '@components/_globals'
 

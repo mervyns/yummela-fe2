@@ -2,6 +2,7 @@ import axios from 'axios'
 
 export const state = {
   currentUser: getSavedState('auth.currentUser'),
+  showAuthModal: false,
 }
 
 export const mutations = {
@@ -9,6 +10,9 @@ export const mutations = {
     state.currentUser = newValue
     saveState('auth.currentUser', newValue)
     setDefaultAuthHeaders(state)
+  },
+  SHOW_AUTH_MODAL(state, newValue) {
+    state.showAuthModal = newValue
   },
 }
 
@@ -43,6 +47,14 @@ export const actions = {
   // Logs out the current user.
   logOut({ commit }) {
     commit('SET_CURRENT_USER', null)
+  },
+
+  showAuthModal({ commit }) {
+    commit('SHOW_AUTH_MODAL', true)
+  },
+
+  hideAuthModal({ commit }) {
+    commit('SHOW_AUTH_MODAL', false)
   },
 
   // Validates the current user's token and refreshes it
