@@ -14,8 +14,8 @@ export default {
 
 <template>
   <Layout>
+    <AuthModal />
     <h1>Home Page</h1>
     <img src="@assets/images/logo.png" alt="Logo" />
-    <AuthModal />
   </Layout>
 </template>
