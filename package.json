@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -38,7 +38,6 @@
     "core-js": "3.6.4",
     "date-fns": "2.10.0",
     "lodash": "4.17.15",
-    "normalize.css": "8.0.1",
     "nprogress": "0.2.0",
     "tailwindcss": "^1.9.5",
     "vue": "2.6.11",
