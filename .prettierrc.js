@@ -3,7 +3,7 @@ module.exports = {
   bracketSpacing: true,
   endOfLine: 'lf',
   htmlWhitespaceSensitivity: 'strict',
-  jsxBracketSameLine: false,
+  jsxBracketSameLine: true,
   jsxSingleQuote: true,
   printWidth: 80,
   proseWrap: 'never',
