@@ -1,24 +1,28 @@
 <script>
-  import NavBar from '@components/Navbar/Navbar.vue'
+import Footer from '@components/Footers/Footer.vue'
+import NavBar from '@components/Navbar/Navbar.vue'
 
-  export default {
-    components: { NavBar },
-  }
+export default {
+  components: { Footer, NavBar },
+}
 </script>
 
 <template>
-  <div :class="$style.container">
+  <div>
     <NavBar />
-    <slot />
+    <div class="container lg:mx-auto">
+      <slot />
+    </div>
+    <Footer />
   </div>
 </template>
 
 <style lang="scss" module>
-  @import '@design';
+@import '@design';
 
-  .container {
-    min-width: $size-content-width-min;
-    max-width: $size-content-width-max;
-    margin: 0 auto;
-  }
+.container {
+  min-width: $size-content-width-min;
+  max-width: $size-content-width-max;
+  margin: 0 auto;
+}
 </style>

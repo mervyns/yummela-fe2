@@ -14,7 +14,7 @@
           >
             Copyright © {{ date }}
             <a
-              href="https://www.creative-tim.com?ref=vtw-footer-small"
+              href="https://www.yummela.co/"
               class="text-white hover:text-gray-400 text-sm font-semibold py-1"
             >
               yummela.co
@@ -41,15 +41,7 @@
             </li>
             <li>
               <a
-                href="http://blog.creative-tim.com?ref=vtw-footer-small"
-                class="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3"
-              >
-                Blog
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/creativetimofficial/vue-tailwind-webapp/blob/master/LICENSE.md?ref=vtw-footer-small"
+                href="https://random.co"
                 class="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3"
               >
                 MIT License
@@ -64,16 +56,16 @@
 
 <script>
 export default {
-  data() {
-    return {
-      date: new Date().getFullYear(),
-    }
-  },
   props: {
     absolute: {
       type: Boolean,
       default: false,
     },
+  },
+  data() {
+    return {
+      date: new Date().getFullYear(),
+    }
   },
 }
 </script>

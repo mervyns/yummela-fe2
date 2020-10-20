@@ -1,40 +1,62 @@
 <template>
-  <header
-    class="bg-gray-900 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3"
-  >
-    <div class="flex items-center justify-between px-4 py-3 sm:p-0">
-      <a
-        href="#"
-        class="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800"
-        >yummela</a
-      >
-    </div>
-    <nav class="px-2 pt-2 pb-4 sm:flex sm:p-0">
-      <a
-        href="#"
-        class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2"
-        >Explore Eats</a
-      >
-      <a
-        href="#"
-        class="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800"
-        >List your eats</a
-      >
-      <a
-        href="#"
-        class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2"
-        >Sign Up / Login</a
-      >
+  <nav class="flex items-center bg-gray-900 p-3 flex-wrap">
+    <div class="container mx-auto">
+      <a href="#" class="p-2 mr-4 inline-flex items-center">
+        <svg
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          class="fill-current text-white h-8 w-8 mr-2"
+        >
+          <path
+            d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"
+          />
+        </svg>
+        <span class="text-xl text-white font-bold uppercase tracking-wide"
+          >YUMMELA
+        </span>
+      </a>
+      <!-- Implement Mobile Responsive Menu Here -->
       <button
-        type="button"
-        class="block text-white hover:text-white focus:text-white focus:outline-none"
-        @click="showAuthModal"
+        class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
+        data-target="#navigation"
       >
-        Sign Up / Login
+        <i class="material-icons">Menu</i>
       </button>
-    </nav>
-  </header>
+      <div
+        id="navigation"
+        class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto float-right"
+      >
+        <div
+          class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto"
+        >
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
+            >Explore Eats
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
+            >List your eats</a
+          >
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
+            >Random Stuff</a
+          >
+          <button
+            type="button"
+            class="text-gray-400 inline-flex p-3 hover:bg-gray-900 rounded ml-auto hover:text-white outline-none nav-toggler"
+            @click="showAuthModal"
+          >
+            Sign Up / Login
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
 </template>
+
 <script>
 import { mapState, mapActions } from 'vuex'
 export default {
